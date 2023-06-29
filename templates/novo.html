@@ -1,0 +1,51 @@
+{% extends "template.html" %}
+{% block conteudo %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <form action="{{ url_for('classifica') }}" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <div class="form-group">
+            <label for="Pclass">Classe do passageiro no navio (1ª, 2ª ou 3ª classe)</label>
+            <input type="text" id="Pclass" name="Pclass" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="Sex">Sexo</label>
+            <input type="text" id="Sex" name="Sex" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="Age">Idade</label>
+            <input type="text" id="Age" name="Age" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="SibSp">Número de irmãos/cônjuges a bordo do Titanic</label>
+            <input type="text" id="SibSp" name="SibSp" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="Parch">Número de pais/filhos a bordo do Titanic</label>
+            <input type="text" id="Parch" name="Parch" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="Fare">Valor da tarifa paga pelo passageiro</label>
+            <input type="text" id="Fare" name="Fare" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="Embarked">Porto de embarque (Cherbourg -> 0, Queenstown -> 1, Southampton -> 2)</label>
+            <input type="text" id="Embarked" name="Embarked" class="form-control">
+          </div>
+
+          <div style="margin: 1em;">
+            <button type="submit" class="btn btn-primary btn-salvar">Salvar</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
